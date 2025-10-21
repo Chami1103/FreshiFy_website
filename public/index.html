@@ -3,10 +3,595 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreshiFy</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <meta name="description" content="FreshiFy - Intelligent Food Shelf-Life Monitoring System using IoT and Machine Learning">
+    <meta name="keywords" content="IoT, Machine Learning, Food Waste Reduction, Smart Monitoring">
+    <meta name="author" content="FreshiFy Team - SLIIT">
+    <title>FreshiFy - Intelligent Food Shelf-Life Monitoring System</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍎</text></svg>">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <script src="assets/script.js"></script>
+    <!-- Scroll Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    <div class="particles" id="particles"></div>
+    <div class="cursor-trail" id="cursorTrail"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">🍎</span>
+                <span>FreshiFy</span>
+            </div>
+            <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" onclick="showSection('home')" class="active">Home</a></li>
+                <li><a href="#domain" onclick="showSection('domain')">Domain</a></li>
+                <li><a href="#milestones" onclick="showSection('milestones')">Milestones</a></li>
+                <li><a href="#documents" onclick="showSection('documents')">Documents</a></li>
+                <li><a href="#presentations" onclick="showSection('presentations')">Presentations</a></li>
+                <li><a href="#about" onclick="showSection('about')">About Us</a></li>
+                <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section-content">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>FreshiFy</h1>
+                <div class="project-id">Intelligent Food Shelf-Life Monitoring System | Project ID: R25-073</div>
+                <p class="tagline">Revolutionizing food management with IoT and AI to reduce waste by 20-30%. Smart monitoring, predictive analytics, and personalized recommendations for a sustainable future.</p>
+                
+                <div class="keywords">
+                    <span class="keyword-tag">IoT Sensors</span>
+                    <span class="keyword-tag">Machine Learning</span>
+                    <span class="keyword-tag">AI Compatibility</span>
+                    <span class="keyword-tag">Smart Monitoring</span>
+                    <span class="keyword-tag">Waste Reduction</span>
+                    <span class="keyword-tag">Recipe Recommendation</span>
+                    <span class="keyword-tag">Sustainable Living</span>
+                </div>
+            </div>
+            <div class="scroll-indicator" onclick="document.getElementById('domain').scrollIntoView({behavior: 'smooth'})"></div>
+        </div>
+
+        <div class="container" style="padding: 6rem 2rem;">
+            <div class="update-note">
+                <div>
+                    <strong>UPDATE NEEDED:</strong> Replace hero background image in assets/images/ folder. Upload your project image (1920x1080px, optimized under 500KB) and update CSS background-image property.
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">20-30%</div>
+                    <div class="stat-label">Waste Reduction</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">92%</div>
+                    <div class="stat-label">Model Accuracy</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Smart Modules</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Monitoring</div>
+                </div>
+            </div>
+
+            <h2 data-text="Project Overview">Project Overview</h2>
+            <div class="domain-item">
+                <p style="font-size: 1.2rem; line-height: 1.9; margin-bottom: 2rem;">
+                    FreshiFy integrates IoT sensor networks with advanced machine learning algorithms to create a comprehensive food management solution. The system monitors environmental conditions in real-time, predicts food spoilage, analyzes storage compatibility, and provides personalized recipe recommendations to minimize waste.
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                    <div class="info-item">
+                        <div class="info-label">Institution</div>
+                        <div class="info-value" style="font-size: 1rem; color: var(--text-color);">Sri Lanka Institute of Information Technology (SLIIT)</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Department</div>
+                        <div class="info-value" style="font-size: 1rem; color: var(--text-color);">Information Technology</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Supervisor</div>
+                        <div class="info-value" style="font-size: 1rem; color: var(--text-color);">Mr. Pradeep Abeygunawardhana</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Submission</div>
+                        <div class="info-value" style="font-size: 1rem; color: var(--text-color);">August 2025</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Domain Section -->
+    <section id="domain" class="section-content hidden">
+        <div class="container">
+            <h2 data-text="Project Domain">Project Domain</h2>
+            
+            <div class="update-note">
+                <div><strong>UPDATE NEEDED:</strong> Expand with detailed Literature Survey findings, comprehensive Research Gap analysis, and complete Methodology documentation from your final reports</div>
+            </div>
+
+            <div class="domain-content">
+                <div class="domain-item">
+                    <h3>📚 Literature Survey</h3>
+                    <p style="margin-bottom: 1rem;"><strong>Global Context:</strong> Food waste is a critical global challenge, with approximately 1.03 billion tonnes wasted annually, contributing to economic losses and environmental degradation.</p>
+                    <p style="margin-bottom: 1rem;"><strong>Sri Lankan Context:</strong> The tropical climate accelerates food spoilage, leading to 20–30% of purchased perishables being wasted in households due to inadequate storage practices and outdated tracking methods.</p>
+                    <p><strong>Current Solutions:</strong> Existing food monitoring systems lack real-time adaptability and fail to address critical storage interactions, such as ethylene-producing fruits affecting sensitive items like leafy greens.</p>
+                </div>
+
+                <div class="domain-item">
+                    <h3>🔍 Research Gap</h3>
+                    <p style="margin-bottom: 1.5rem;">Our comprehensive analysis revealed several critical limitations in current food storage systems:</p>
+                    <div style="display: grid; gap: 1rem;">
+                        <div class="research-gap-item">
+                            <strong>• Real-Time Monitoring:</strong> Absence of continuous environmental factor tracking (temperature, humidity, ethylene gas exposure)
+                        </div>
+                        <div class="research-gap-item">
+                            <strong>• Personalization:</strong> Lack of user-specific recommendations based on dietary preferences and health profiles
+                        </div>
+                        <div class="research-gap-item">
+                            <strong>• Compatibility Analysis:</strong> No intelligent system to identify harmful food storage combinations
+                        </div>
+                        <div class="research-gap-item">
+                            <strong>• Climate Adaptation:</strong> Inadequate dynamic shelf-life predictions for tropical environments
+                        </div>
+                        <div class="research-gap-item">
+                            <strong>• User Experience:</strong> Limited intuitive interfaces for household adoption
+                        </div>
+                    </div>
+                </div>
+
+                <div class="domain-item">
+                    <h3>❓ Research Problem</h3>
+                    <p class="research-problem">
+                        <em>"How can we develop an intelligent, IoT-enabled system that dynamically monitors food storage environments, accurately predicts spoilage in tropical climates, analyzes food compatibility, and provides personalized recommendations to significantly reduce household food waste?"</em>
+                    </p>
+                </div>
+
+                <div class="domain-item">
+                    <h3>🎯 Research Objectives</h3>
+                    <div class="objectives-list">
+                        <div class="objective-item">
+                            <span class="objective-number">1</span>
+                            <div>
+                                <strong>IoT-Enabled Monitoring:</strong>
+                                <p>Design and implement environmental monitoring using DHT22 (temperature/humidity) and MQ135/MQ-137 (gas) sensors</p>
+                            </div>
+                        </div>
+                        <div class="objective-item">
+                            <span class="objective-number">2</span>
+                            <div>
+                                <strong>ML-Based Prediction:</strong>
+                                <p>Develop machine learning models (Random Forest, CNN, LSTM) for food compatibility and spoilage prediction</p>
+                            </div>
+                        </div>
+                        <div class="objective-item">
+                            <span class="objective-number">3</span>
+                            <div>
+                                <strong>Alert Systems:</strong>
+                                <p>Implement real-time notification system for critical storage conditions with priority tiers</p>
+                            </div>
+                        </div>
+                        <div class="objective-item">
+                            <span class="objective-number">4</span>
+                            <div>
+                                <strong>Recipe Engine:</strong>
+                                <p>Create personalized recipe recommendation system to minimize waste using near-expiring ingredients</p>
+                            </div>
+                        </div>
+                        <div class="objective-item">
+                            <span class="objective-number">5</span>
+                            <div>
+                                <strong>Validation:</strong>
+                                <p>Achieve target accuracy >90% through rigorous household trials and testing</p>
+                            </div>
+                        </div>
+                        <div class="objective-item">
+                            <span class="objective-number">6</span>
+                            <div>
+                                <strong>Scalability:</strong>
+                                <p>Ensure modular architecture and user-friendly mobile interface for widespread adoption</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="domain-item">
+                    <h3>🔬 Methodology</h3>
+                    <p style="margin-bottom: 2.5rem; font-size: 1.1rem;">The project employs a modular, microservices architecture with seamless integration across hardware, backend, and frontend components:</p>
+                    <div class="methodology-grid">
+                        <div class="methodology-item">
+                            <h4>🔌 Data Collection Layer</h4>
+                            <p>ESP32 microcontrollers integrated with DHT22, MQ135, MQ-137, and TCS34725 sensors for comprehensive environmental monitoring</p>
+                        </div>
+                        <div class="methodology-item">
+                            <h4>🤖 Machine Learning Pipeline</h4>
+                            <p>MobileNetV2 CNNs for image classification, Random Forest for compatibility analysis, SVM and LSTM networks for predictive modeling</p>
+                        </div>
+                        <div class="methodology-item">
+                            <h4>⚙️ Backend Processing</h4>
+                            <p>Python Flask REST APIs with MongoDB Atlas and PostgreSQL for efficient data storage and retrieval</p>
+                        </div>
+                        <div class="methodology-item">
+                            <h4>📱 Mobile Application</h4>
+                            <p>React Native (Expo) cross-platform interface with real-time dashboards and interactive features</p>
+                        </div>
+                        <div class="methodology-item">
+                            <h4>✅ Validation & Testing</h4>
+                            <p>Household trials with accuracy measurements targeting >90% performance across all modules</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="domain-item">
+                    <h3>💻 Technologies Used</h3>
+                    <div class="tech-grid">
+                        <div class="tech-category">
+                            <h3>🔧 Hardware</h3>
+                            <ul>
+                                <li>ESP32 Microcontroller</li>
+                                <li>DHT22 Sensor (Temp/Humidity)</li>
+                                <li>MQ135 Gas Sensor (Ethylene)</li>
+                                <li>MQ-137 Gas Sensor (Ammonia)</li>
+                                <li>TCS34725 RGB Color Sensor</li>
+                            </ul>
+                        </div>
+                        <div class="tech-category">
+                            <h3>⚙️ Backend</h3>
+                            <ul>
+                                <li>Python & Flask Framework</li>
+                                <li>MongoDB Atlas (NoSQL)</li>
+                                <li>PostgreSQL (SQL)</li>
+                                <li>RESTful APIs</li>
+                                <li>Microservices Architecture</li>
+                            </ul>
+                        </div>
+                        <div class="tech-category">
+                            <h3>🤖 ML/AI Stack</h3>
+                            <ul>
+                                <li>TensorFlow & Keras</li>
+                                <li>MobileNetV2 (CNN)</li>
+                                <li>Scikit-learn (RF, SVM)</li>
+                                <li>OpenCV (Computer Vision)</li>
+                                <li>TensorFlow Lite (Mobile)</li>
+                            </ul>
+                        </div>
+                        <div class="tech-category">
+                            <h3>📱 Frontend</h3>
+                            <ul>
+                                <li>React Native</li>
+                                <li>Expo Framework</li>
+                                <li>Cross-Platform Development</li>
+                                <li>Real-Time Dashboards</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Milestones Section -->
+    <section id="milestones" class="section-content hidden">
+        <div class="container">
+            <h2 data-text="Project Milestones">Project Milestones</h2>
+            
+            <div class="update-note">
+                <div><strong>UPDATE NEEDED:</strong> Update milestone dates and marks in assets/js/web.js file (milestones object)</div>
+            </div>
+
+            <div class="milestone-select">
+                <select id="milestoneDropdown" onchange="showMilestone()">
+                    <option value="">🎯 Select a Milestone to View Details</option>
+                    <option value="proposal">📋 Project Proposal</option>
+                    <option value="progress1">📊 Progress Presentation 1</option>
+                    <option value="progress2">📈 Progress Presentation 2</option>
+                    <option value="final">🎓 Final Assessment</option>
+                    <option value="viva">🎤 Viva Voce</option>
+                </select>
+            </div>
+
+            <div id="milestoneContent"></div>
+        </div>
+    </section>
+
+    <!-- Documents Section -->
+    <section id="documents" class="section-content hidden">
+        <div class="container">
+            <h2 data-text="Project Documents">Project Documents</h2>
+            
+            <div class="update-note">
+                <div><strong>UPDATE NEEDED:</strong> Upload PDFs to public/documents/ folder and update href links below</div>
+            </div>
+
+            <div class="doc-grid">
+                <div class="doc-card">
+                    <div class="doc-icon">📋</div>
+                    <h4>Project Charter</h4>
+                    <p class="doc-description">Initial project scope and objectives</p>
+                    <a href="documents/FreshiFy_ProjectCharter.pdf" class="doc-link" target="_blank"><span>Download PDF</span></a>
+                </div>
+
+                <div class="doc-card">
+                    <div class="doc-icon">📄</div>
+                    <h4>Proposal Document</h4>
+                    <p class="doc-description">Complete project proposal</p>
+                    <a href="documents/FreshiFy_Proposal.pdf" class="doc-link" target="_blank"><span>Download PDF</span></a>
+                </div>
+
+                <div class="doc-card">
+                    <div class="doc-icon">✅</div>
+                    <h4>Check List Documents</h4>
+                    <p class="doc-description">Assessment checklists and rubrics</p>
+                    <a href="documents/FreshiFy_Checklists.pdf" class="doc-link" target="_blank"><span>Download PDF</span></a>
+                </div>
+
+                <div class="doc-card">
+                    <div class="doc-icon">📘</div>
+                    <h4>Final Report</h4>
+                    <p class="doc-student">IT19970882</p>
+                    <p class="doc-description">Food Storage Compatibility Module</p>
+                    <a href="documents/IT19970882_FinalReport.pdf" class="doc-link" target="_blank"><span>Download PDF</span></a>
+                </div>
+
+                <div class="doc-card">
+                    <div class="doc-icon">📗</div>
+                    <h4>Final Report</h4>
+                    <p class="doc-student">IT20196110</p>
+                    <p class="doc-description">Spoilage Detection System</p>
+                    <a href="documents/IT20196110_FinalReport.pdf" class="doc-link" target="_blank"><span>Download PDF</span></a>
+                </div>
+
+                <div class="doc-card">
+                    <div class="doc-icon">📙</div>
+                    <h4>Final Report</h4>
+                    <p class="doc-student">IT21828720</p>
+                    <p class="doc-description">Shelf Life Estimation Module</p>
+                    <a href="documents/IT21828720_FinalReport.pdf" class="doc-link" target="_blank"><span>Download PDF</span></a>
+                </div>
+
+                <div class="doc-card">
+                    <div class="doc-icon">📕</div>
+                    <h4>Final Report</h4>
+                    <p class="doc-student">IT21829710</p>
+                    <p class="doc-description">Recipe Recommendation Engine</p>
+                    <a href="documents/IT21829710_FinalReport.pdf" class="doc-link" target="_blank"><span>Download PDF</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Presentations Section -->
+    <section id="presentations" class="section-content hidden">
+        <div class="container">
+            <h2 data-text="Presentation Slides">Presentation Slides</h2>
+            
+            <div class="update-note">
+                <div><strong>UPDATE NEEDED:</strong> Upload presentation files to public/presentations/ folder and update href links below</div>
+            </div>
+
+            <div class="doc-grid">
+                <div class="doc-card">
+                    <div class="doc-icon">🎤</div>
+                    <h4>Proposal Presentation</h4>
+                    <p class="doc-description">Initial project pitch and concept</p>
+                    <a href="presentations/FreshiFy_ProposalPresentation.pdf" class="doc-link" target="_blank"><span>View Slides</span></a>
+                </div>
+
+                <div class="doc-card">
+                    <div class="doc-icon">📊</div>
+                    <h4>Progress Presentation 1</h4>
+                    <p class="doc-description">First milestone progress update</p>
+                    <a href="presentations/FreshiFy_Progress1.pdf" class="doc-link" target="_blank"><span>View Slides</span></a>
+                </div>
+
+                <div class="doc-card">
+                    <div class="doc-icon">📈</div>
+                    <h4>Progress Presentation 2</h4>
+                    <p class="doc-description">Second milestone progress update</p>
+                    <a href="presentations/FreshiFy_Progress2.pdf" class="doc-link" target="_blank"><span>View Slides</span></a>
+                </div>
+
+                <div class="doc-card">
+                    <div class="doc-icon">🎓</div>
+                    <h4>Final Presentation</h4>
+                    <p class="doc-description">Complete project showcase</p>
+                    <a href="presentations/FreshiFy_FinalPresentation.pdf" class="doc-link" target="_blank"><span>View Slides</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section-content hidden">
+        <div class="container">
+            <h2 data-text="Meet Our Team">Meet Our Team</h2>
+            
+            <div class="update-note">
+                <div><strong>UPDATE NEEDED:</strong> Upload team photos to assets/images/team/ folder. Update image src attributes and email addresses below</div>
+            </div>
+
+            <div class="members-grid">
+                <div class="member-card">
+                    <div class="member-content">
+                        <div class="member-photo">
+                            <!-- UPDATE: Replace with <img src="assets/images/team/fernando.jpg" alt="Fernando M.G.S.S.A"> -->
+                            👤
+                        </div>
+                        <h3>Fernando M.G.S.S.A</h3>
+                        <div class="member-id">IT19970882</div>
+                        <div class="member-module">Managing Food Storage Compatibility</div>
+                        <p class="member-bio">
+                            Specialized in IoT sensor integration and ML-based compatibility analysis using Random Forest and clustering algorithms. Achieved 92% model accuracy.
+                        </p>
+                        <a href="mailto:it19970882@my.sliit.lk" class="member-email">✉️ Email Me</a>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="member-content">
+                        <div class="member-photo">
+                            <!-- UPDATE: Replace with <img src="assets/images/team/perera_bcv.jpg" alt="Perera B.C.V"> -->
+                            👤
+                        </div>
+                        <h3>Perera B.C.V</h3>
+                        <div class="member-id">IT20196110</div>
+                        <div class="member-module">Real-Time Food Identification & Spoilage Detection</div>
+                        <p class="member-bio">
+                            Focused on image recognition using MobileNetV2 and multi-sensor data fusion for spoilage detection. Combined system accuracy over 91%.
+                        </p>
+                        <a href="mailto:it20196110@my.sliit.lk" class="member-email">✉️ Email Me</a>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="member-content">
+                        <div class="member-photo">
+                            <!-- UPDATE: Replace with <img src="assets/images/team/kularathna.jpg" alt="Kularathna E.M.S.D"> -->
+                            👤
+                        </div>
+                        <h3>Kularathna E.M.S.D</h3>
+                        <div class="member-id">IT21828720</div>
+                        <div class="member-module">Estimating Remaining Shelf Life of Food Items</div>
+                        <p class="member-bio">
+                            Developed CNN-based freshness classification and dynamic shelf-life prediction using Q10 formula with environmental data adaptation.
+                        </p>
+                        <a href="mailto:it21828720@my.sliit.lk" class="member-email">✉️ Email Me</a>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="member-content">
+                        <div class="member-photo">
+                            <!-- UPDATE: Replace with <img src="assets/images/team/perera_paek.jpg" alt="Perera P.A.E.U.K"> -->
+                            👤
+                        </div>
+                        <h3>Perera P.A.E.U.K</h3>
+                        <div class="member-id">IT21829710</div>
+                        <div class="member-module">Personalized Recipe Recommendation System</div>
+                        <p class="member-bio">
+                            Created hybrid ML recommendation system using content-based and collaborative filtering. Achieved 85% personalization accuracy.
+                        </p>
+                        <a href="mailto:it21829710@my.sliit.lk" class="member-email">✉️ Email Me</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="domain-item supervision-section">
+                <h3 style="justify-content: center;">🎓 Academic Supervision</h3>
+                <div class="supervision-grid">
+                    <div class="info-item">
+                        <div class="info-label">Supervisor</div>
+                        <div class="info-value" style="font-size: 1.1rem; color: var(--dark-color);">Mr. Pradeep Abeygunawardhana</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Co-Supervisor</div>
+                        <div class="info-value" style="font-size: 1.1rem; color: var(--dark-color);">Mr. Samadhi Rathnayaka</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Institution</div>
+                        <div class="info-value" style="font-size: 1.1rem; color: var(--dark-color);">Sri Lanka Institute of Information Technology</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Department</div>
+                        <div class="info-value" style="font-size: 1.1rem; color: var(--dark-color);">Information Technology</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="section-content hidden">
+        <div class="container">
+            <h2 data-text="Get In Touch">Get In Touch</h2>
+            
+            <div class="update-note">
+                <div><strong>UPDATE NEEDED:</strong> Update contact email and phone number below</div>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-item-icon">📧</div>
+                    <h3>Email</h3>
+                    <p class="contact-detail">freshify.project@sliit.lk</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon">📞</div>
+                    <h3>Phone</h3>
+                    <p class="contact-detail">+94 XX XXX XXXX</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon">🏢</div>
+                    <h3>Location</h3>
+                    <p class="contact-detail">SLIIT, Malabe Campus</p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3 class="form-title">Send Us a Message</h3>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" placeholder="john@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" placeholder="Project Inquiry" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Write your message here..." required></textarea>
+                </div>
+
+                <button type="button" class="submit-btn" onclick="handleSubmit()">Send Message 📨</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#home" onclick="showSection('home')">Home</a>
+                <a href="#domain" onclick="showSection('domain')">Domain</a>
+                <a href="#milestones" onclick="showSection('milestones')">Milestones</a>
+                <a href="#documents" onclick="showSection('documents')">Documents</a>
+                <a href="#about" onclick="showSection('about')">About Us</a>
+                <a href="#contact" onclick="showSection('contact')">Contact</a>
+            </div>
+            <p class="footer-title">🍎 FreshiFy - Intelligent Food Shelf-Life Monitoring System</p>
+            <p class="footer-subtitle">Project ID: R25-073 | SLIIT © 2025</p>
+            <p class="footer-tagline">Reducing food waste through intelligent monitoring and AI-powered recommendations</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/web.js"></script>
 </body>
 </html>
